@@ -66,6 +66,10 @@ class Player
 		@number_of_win
 	end
 
+	# Method : return_number_of_egality
+  # Paramètre : Ne prend aucun paramètre
+  # Description : La method retourne le nombre d'egalite du joueur
+
 	def return_number_of_egality
 		@number_of_egality
 	end
