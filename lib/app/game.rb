@@ -68,25 +68,6 @@ class Game
 			(@board_case["A3"] == @board_case["B2"] && @board_case["B2"] == @board_case["C1"] && @board_case["A3"] != " ")
 			game_win = true
 		end
-
-		# case @board_case
-		# 	when @board_case["A1"] == @board_case["A2"] && @board_case["A2"] == @board_case["A3"] && @board_case["A1"] != " "
-		# 		game_win = true
-		# 	when @board_case["B1"] == @board_case["B2"] && @board_case["B2"] == @board_case["B3"] && @board_case["B1"] != " "
-		# 		game_win = true
-		# 	when @board_case["C1"] == @board_case["C2"] && @board_case["C2"] == @board_case["C3"] && @board_case["C1"] != " "
-		# 		game_win = true
-		# 	when @board_case["A1"] == @board_case["B1"] && @board_case["B1"] == @board_case["C1"] && @board_case["A1"] != " "
-		# 		game_win = true
-		# 	when @board_case["A2"] == @board_case["B2"] && @board_case["B2"] == @board_case["C2"] && @board_case["A2"] != " "
-		# 		game_win = true
-		# 	when @board_case["A3"] == @board_case["B3"] && @board_case["B3"] == @board_case["C3"] && @board_case["A3"] != " "
-		# 		game_win = true
-		# 	when @board_case["A1"] == @board_case["B2"] && @board_case["B2"] == @board_case["C3"] && @board_case["A1"] != " "
-		# 		game_win = true
-		# 	when @board_case["A3"] == @board_case["B2"] && @board_case["B2"] == @board_case["C1"] && @board_case["A3"] != " "
-		# 		game_win = true
-		# end
 		game_win
 	end
 end
