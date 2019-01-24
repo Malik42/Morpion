@@ -20,8 +20,12 @@ class Game
 			if is_win == true
 				if @who_play == 1
 					puts "le joueur #{@player_one.return_name} a gagner cette partie!"
+					@player_one.increments_number_of_win
+					@player_one.return_number_of_win
 				else
 					puts "le joueur #{@player_two.return_name} a gagner cette partie!"
+					@player_two.increments_number_of_win
+					@player_two.return_number_of_win
 				end
 				break
 			end
@@ -39,7 +43,6 @@ class Game
 		while valide_choice == 0
 			puts "Choisisez la case sur laquel vous voulez jouer.\n Si par exemple vous voulez jouer sur la premiere case ecrivez \"A1\""
 			case_choosed = gets.chomp.upcase
-			puts "Joueur :"
 			if (case_choosed[0] =~ /[A-C]/) != 0
 				case_choosed.reverse!
 			end
@@ -58,11 +61,9 @@ class Game
 	def modif_board_case(str)
 		if @who_play == 1
 			puts @player_one.return_name
-			puts @player_one.return_number_of_win
 			@board_case[str] = 'X'
 		else
 			puts @player_two.return_name
-			puts @player_one.return_number_of_win
 			@board_case[str] = 'O'
 		end
 	end

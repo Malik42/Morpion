@@ -1,3 +1,4 @@
+require "./lib/app/game.rb"
 # Classe Board : La class Board sert à créer les joueur
 #
 # Variable : Possède des varibles d'instances :
@@ -16,7 +17,7 @@ class Player
 	# Variables :
 
 	attr_accessor :name # Nom du joueur avec le droit d'ecriture et de lecture
-	@number_of_win = 0 # Nombre de partie gagnez
+	attr_accessor :number_of_win # Nombre de partie gagnez
 	@number_of_egality = 0 # Nombre de partie egalité
 
 	# Method : initialize
@@ -25,6 +26,7 @@ class Player
 
 	def initialize
 		@name = gets.chomp
+		@number_of_win = 0
 	end
 
 	# Method : return_name
@@ -40,7 +42,6 @@ class Player
   # Description : La method sert a incrémenté la variable number_of_win à chaque victoire
 
 	def increments_number_of_win
-		if @name == win
 			@number_of_win += 1
 		end
 	end
