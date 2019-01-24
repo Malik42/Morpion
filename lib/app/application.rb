@@ -1,5 +1,5 @@
-class application
-	@number_of_part = ""
+class Application
+	@number_of_part = 0
 
 	def initialize
 		game = game.new
@@ -10,7 +10,7 @@ class application
 	end
 
 	def incrementes_number_of_part
-
+			
 	end
 
 	def ask_replay
@@ -21,3 +21,5 @@ class application
 
 	end
 end
+
+malik = application.new
