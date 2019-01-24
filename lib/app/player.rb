@@ -16,22 +16,20 @@ class Player
 	end
 
 	def increments_number_of_win
-		@number_of_win
 		if @name == win
-			@number_of_win +=
+			@number_of_win += 1
 		end
 	end
 
 	def increments_number_of_egality
-		@number_of_egality
 		if @name == egality
-			@number_of_egality +=
+			@number_of_egality += 1
 			puts "Egalité"
 		end
 	end
 
 	def return_number_of_win
-		@return_number_of_win
+		@number_of_win
 	end
 end
 
