@@ -1,3 +1,4 @@
+require "./lib/app/game.rb"
 # Classe Application : La class Application sert à créer 
 #
 # Variable : Possède des varibles d'instances :
@@ -21,8 +22,9 @@ class Application
   # Description : La method initialise l'objet game et initialise le nombre de partie a 0
 	
 	def initialize
-		game = game.new
+		@game = Game.new
 		@number_of_part = 0
+		start_game
 	end
 
 	# Method : start_game
@@ -30,7 +32,8 @@ class Application
   # Description : La method commence une partie
 
 	def start_game
-		game.play
+		@game.play
+		ask_replay
 	end
 
 	# Method : incrementes_number_of_part
@@ -49,6 +52,8 @@ class Application
 		puts "Voulez vous rejouer ? OUI ou NON"
 		replay = gets.chomp
 		if replay.upcase == "OUI"
+			incrementes_number_of_part
+			@game.init_board_case
 			start_game
 		else
 			exit_game
@@ -63,3 +68,5 @@ class Application
 		puts "Au revoir"
 	end
 end
+
+test = Application.new

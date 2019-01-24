@@ -6,9 +6,9 @@ class Game
 		@who_play = rand(1..2)
 		@board_case = {"A1" => " ", "A2" => " ", "A3" => " ", "B1" => " ", "B2" => " ", "B3" => " ", "C1" => " ", "C2" => " ", "C3" => " "}
 		print "name of gamer 1: "
-		player_one = Player.new
+		@player_one = Player.new
 		print "name of gamer 2: "
-		player_two = Player.new
+		@player_two = Player.new
 		play
 	end
 
@@ -18,7 +18,14 @@ class Game
 			board.display_board(@board_case) if i == 1
 			select_board_case
 			board.display_board(@board_case)
-			puts is_win
+			if is_win == true
+				if @who_play == 1
+					puts "le joueur #{@player_one.return_name} a gagner cette partie!"
+				else
+					puts "le joueur #{@player_two.return_name} a gagner cette partie!"
+				end
+				break
+			end
 			if @who_play == 1
 				@who_play = 2
 			else
@@ -70,6 +77,10 @@ class Game
 		end
 		game_win
 	end
+
+	def init_board_case
+		@board_case = {"A1" => " ", "A2" => " ", "A3" => " ", "B1" => " ", "B2" => " ", "B3" => " ", "C1" => " ", "C2" => " ", "C3" => " "}
+	end
 end
 
-test = Game.new
+# test = Game.new
