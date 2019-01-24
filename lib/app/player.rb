@@ -1,5 +1,3 @@
-
-
 class Player
 	@name= ""
 	@number_of_win = 0

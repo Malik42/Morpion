@@ -2,7 +2,7 @@ class application
 	@number_of_part = ""
 
 	def initialize
-
+		game = game.new
 	end
 
 	def start_game
@@ -18,6 +18,6 @@ class application
 	end
 
 	def exit_game
-		
+
 	end
 end
