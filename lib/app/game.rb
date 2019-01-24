@@ -64,6 +64,8 @@ class Game
 	end
 
 	def modif_board_case(str)
+		puts "Joueur : #{@player_one.return_name}, Nombre de win : #{@player_one.return_number_of_win}"
+		puts "Joueur : #{@player_two.return_name}, Nombre de win : #{@player_two.return_number_of_win}"
 		if @who_play == 1
 			puts " "
 			puts " "
