@@ -1,7 +1,6 @@
 class Application
 	attr_accessor :number_of_part
 	
-
 	def initialize
 		game = game.new
 		@number_of_part = 0
