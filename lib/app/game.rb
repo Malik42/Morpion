@@ -9,7 +9,6 @@ class Game
 		@player_one = Player.new
 		print "name of gamer 2: "
 		@player_two = Player.new
-		play
 	end
 
 	def play
