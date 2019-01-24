@@ -24,7 +24,7 @@ class Player
   # Description : La method initialise l'objet et demande a l'utilisateur de rentrez son nom
 
 	def initialize
-		@name = gets.chomp-
+		@name = gets.chomp
 	end
 
 	# Method : return_name
