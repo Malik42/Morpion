@@ -52,6 +52,7 @@ class Application
 		puts "Voulez vous rejouer ? OUI ou NON"
 		replay = gets.chomp
 		if replay.upcase == "OUI"
+			incrementes_number_of_part
 			@game.init_board_case
 			start_game
 		else
