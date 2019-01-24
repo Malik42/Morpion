@@ -1,4 +1,15 @@
+# Classe Board : La class Board sert à afficher
+#
+# Variable : Possède aucune variable
+#
+# Method : Possède une Method "display_board" qui prend en paramètre un hash
+
 class Board
+
+  # Method : display_board
+  # Paramètre : la method prend un hash en paramètre qu'on lui donnera dans la classe game
+  # Description : La method gère l'affichage de la grille avec les valeur dans les case
+
   def display_board(hash)
     puts "      1       2       3"
     puts "  *************************"
