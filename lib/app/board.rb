@@ -12,7 +12,7 @@ class Board
   # Description : La method gère l'affichage de la grille avec les valeur dans les case
 
   def display_board(hash)
-    puts "      1       2       3"
+    puts "      1       2       3".colorize(:red)
     puts "  *************************".colorize(:blue)
     puts "  *       |       |       *".colorize(:blue)
     puts "A *   #{hash.fetch("A1")}   |   #{hash.fetch("A2")}   |   #{hash.fetch("A3")}   *".colorize(:blue)
