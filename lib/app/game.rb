@@ -57,8 +57,10 @@ class Game
 
 	def modif_board_case(str)
 		if @who_play == 1
+			puts @player_one.return_name
 			@board_case[str] = 'X'
 		else
+			puts @player_two.return_name
 			@board_case[str] = 'O'
 		end
 	end
