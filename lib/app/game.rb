@@ -14,13 +14,9 @@ class Game
 	def play
 		board = Board.new
 		for i in 1..9
-<<<<<<< HEAD
-			board.stats
-=======
 			# puts "Joueur : #{@player_one.return_name}, Nombre de win : #{@player_one.return_number_of_win}"
 			# puts "Joueur : #{@player_two.return_name}, Nombre de win : #{@player_two.return_number_of_win}"
 			board.display_stat(@player_one.return_name, @player_two.return_name, @player_one.return_number_of_win, @player_two.return_number_of_win, @player_two.return_number_of_egality)
->>>>>>> 55f3573b234758de5151790490a33ac02d5e8073
 			board.display_board(@board_case) if i == 1
 			select_board_case
 			board.display_board(@board_case)
