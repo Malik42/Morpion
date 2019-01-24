@@ -37,7 +37,7 @@ class Player
 		flag = 0
 
 		while flag == 0
-			puts "entrez un nom qui as entre 1 et 20 characteres"
+			puts "\nentrez un nom qui as entre 1 et 20 characteres"
 			@name = gets.chomp
 			if (@name.length > 1 && @name.length < 20) && (@name.include?(" ") == false && @name.include?("\n") == false && @name.include?("\t") == false && @name.include?("\r") == false)
 				flag = 1

@@ -5,9 +5,9 @@ class Game
 	def initialize
 		@who_play = rand(1..2)
 		@board_case = {"A1" => " ", "A2" => " ", "A3" => " ", "B1" => " ", "B2" => " ", "B3" => " ", "C1" => " ", "C2" => " ", "C3" => " "}
-		print "Nom du joueur 1 : "
+		print "name of gamer 1: ".colorize(:blue)
 		@player_one = Player.new
-		print "Nom du joueur 2 : "
+		print "name of gamer 2: ".colorize(:blue)
 		@player_two = Player.new
 	end
 
