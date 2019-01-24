@@ -3,7 +3,7 @@ require "./lib/app/board.rb"
 
 class Game
 	def initialize
-		@who_play = 0
+		@who_play = rand(1..2)
 		@board_case = {"A1" => " ", "A2" => " ", "A3" => " ", "B1" => " ", "B2" => " ", "B3" => " ", "C1" => " ", "C2" => " ", "C3" => " "}
 		print "name of gamer 1: "
 		player_one = Player.new
@@ -14,15 +14,11 @@ class Game
 
 	def play
 		board = Board.new
-		
-		if @who_play == 0
-			@who_play == rand(1..2)
-		end
-
 		for i in 1..9
 			board.display_board(@board_case) if i == 1
 			select_board_case
 			board.display_board(@board_case)
+			puts is_win
 			if @who_play == 1
 				@who_play = 2
 			else
@@ -48,18 +44,8 @@ class Game
 			if !(@board_case.has_value?(" "))
 				valide_choice = 1
 			end
-			# if (@board_case['A1'] != " " && @board_case['A2'] != " " && @board_case['A3'] != " " && @board_case['C1'] != " " && @board_case['C2'] != " " && @board_case['C3'] != " " && @board_case['A1'] != " " && @board_case['A1'] != " " &&)
 		end
 		modif_board_case(case_choosed)
-		# test = @board_case.fetch(case_choosed)
-		# # puts "la valeur est #{test.class}"
-		# if test == " "
-		# 	puts "SA PASSE "
-		# elsif test == "O" || test == "X"
-		# 	puts "sa passe aussi"
-		# else
-		# 	puts "ERROR"
-		# end
 	end
 
 	def modif_board_case(str)
@@ -71,7 +57,18 @@ class Game
 	end
 
 	def is_win
-		
+		game_win = false
+		if (@board_case["A1"] == @board_case["A2"] && @board_case["A2"] == @board_case["A3"] && @board_case["A1"] != " ") ||
+			(@board_case["B1"] == @board_case["B2"] && @board_case["B2"] == @board_case["B3"] && @board_case["B1"] != " ") ||
+			(@board_case["C1"] == @board_case["C2"] && @board_case["C2"] == @board_case["C3"] && @board_case["C1"] != " ") ||
+			(@board_case["A1"] == @board_case["B1"] && @board_case["B1"] == @board_case["C1"] && @board_case["A1"] != " ") ||
+			(@board_case["A2"] == @board_case["B2"] && @board_case["B2"] == @board_case["C2"] && @board_case["A2"] != " ") ||
+			(@board_case["A3"] == @board_case["B3"] && @board_case["B3"] == @board_case["C3"] && @board_case["A3"] != " ") ||
+			(@board_case["A1"] == @board_case["B2"] && @board_case["B2"] == @board_case["C3"] && @board_case["A1"] != " ") ||
+			(@board_case["A3"] == @board_case["B2"] && @board_case["B2"] == @board_case["C1"] && @board_case["A3"] != " ")
+			game_win = true
+		end
+		game_win
 	end
 end
 
