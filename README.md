@@ -9,7 +9,7 @@ The first step you run the |> ruby app.rb| in your terminal to the folder root.
 The second step you... play :) No more, no less
 
 
-Morpion
+Tic Tac Toe
 This is a data harvesting program made write in ruby by students
 
 ## contributors
