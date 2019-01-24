@@ -18,7 +18,7 @@ class Player
 	attr_accessor :name # Nom du joueur avec le droit d'ecriture et de lecture
 	attr_accessor :number_of_win
 	#@number_of_win = 0 # Nombre de partie gagnez
-	@number_of_egality = 0 # Nombre de partie egalité
+	
 
 	# Method : initialize
   # Paramètre : Ne prend aucun paramètre
@@ -27,6 +27,7 @@ class Player
 	def initialize
 		@name = gets.chomp
 		@number_of_win = 0
+		@number_of_egality = 0 # Nombre de partie egalité
 	end
 
 	# methode: init_name
