@@ -21,11 +21,11 @@ class Game
 				if @who_play == 1
 					puts "le joueur #{@player_one.return_name} a gagner cette partie!"
 					@player_one.increments_number_of_win
-					@player_one.return_number_of_win
+					puts @player_one.return_number_of_win
 				else
 					puts "le joueur #{@player_two.return_name} a gagner cette partie!"
 					@player_two.increments_number_of_win
-					@player_two.return_number_of_win
+					puts @player_two.return_number_of_win
 				end
 				break
 			end
