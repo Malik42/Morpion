@@ -55,10 +55,7 @@ class Player
   # Description : La method sert a incrémenté la variable number_of_egality à chaque match null
 
 	def increments_number_of_egality
-		if @name == egality
 			@number_of_egality += 1
-			puts "Egalité"
-		end
 	end
 
 	# Method : return_number_of_win
