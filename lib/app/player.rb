@@ -1,5 +1,3 @@
-require "pry"
-
 class Player
 	attr_accessor :name
 	@name= ""
@@ -32,4 +30,3 @@ class Player
 		@number_of_win
 	end
 end
-

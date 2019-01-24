@@ -16,7 +16,3 @@ class Board
     puts "  *************************"
   end
 end
-
-# test = Board.new
-
-# test.display_board({"A1"=>"X", "A2" => "O", "A3" => "X", "B1" => "O", "B2" => "O", "B3" => "X", "C1" => "O", "C2" => "X", "C3" => "O"})

@@ -4,7 +4,7 @@ class Game
 	end
 
 	def play
-		
+
 	end
 
 	def is_win
