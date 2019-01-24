@@ -26,6 +26,6 @@ class Application
 	end
 
 	def exit_game
-		
+		puts "Au revoir"
 	end
 end
