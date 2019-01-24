@@ -1,9 +1,10 @@
-require 'bundler'
-Bundler.require
-require ""
-
-$:.unshift File.expand_path("./../lib", __FILE__)
-
+#require 'bundler'
+#Bundler.require
+require './lib/app/application.rb'
+require './lib/app/game.rb'
+require './lib/app/player.rb'
+require './lib/app/board.rb'
+#$:.unshift File.expand_path("./lib/app/application.rb", __FILE__)
 
 def game_again
 	while true
@@ -16,7 +17,7 @@ def game_again
 		case continued
 		when 1
 			puts "La partie démarre"
-			@game.create_player
+			game = Application.new
 		when 2
 			puts "Merci et à bientôt"
 			break
@@ -25,3 +26,5 @@ def game_again
 		end
 	end
 end
+
+game_again

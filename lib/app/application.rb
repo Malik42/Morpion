@@ -69,4 +69,4 @@ class Application
 	end
 end
 
-test = Application.new
+#test = Application.new
