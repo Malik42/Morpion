@@ -12,18 +12,18 @@ class Board
   # Description : La method gère l'affichage de la grille avec les valeur dans les case
 
   def display_board(hash)
-    puts "      1       2       3".colorize(:red)
+    puts "      1       2       3".colorize(:white)
     puts "  *************************".colorize(:blue)
     puts "  *       |       |       *".colorize(:blue)
-    puts "A".colorize(:red) + " *   #{hash.fetch("A1")}   |   #{hash.fetch("A2")}   |   #{hash.fetch("A3")}   *".colorize(:blue)
+    puts "A".colorize(:white) + " *   #{hash.fetch("A1")}   |   #{hash.fetch("A2")}   |   #{hash.fetch("A3")}   *".colorize(:blue)
     puts "  *       |       |       *".colorize(:blue)
     puts "  *-----------------------*".colorize(:blue)
     puts "  *       |       |       *".colorize(:blue)
-    puts "B".colorize(:red) + " *   #{hash.fetch("B1")}   |   #{hash.fetch("B2")}   |   #{hash.fetch("B3")}   *".colorize(:blue)
+    puts "B".colorize(:white) + " *   #{hash.fetch("B1")}   |   #{hash.fetch("B2")}   |   #{hash.fetch("B3")}   *".colorize(:blue)
     puts "  *       |       |       *".colorize(:blue)
     puts "  *-----------------------*".colorize(:blue)
     puts "  *       |       |       *".colorize(:blue)
-    puts "C".colorize(:red) + " *   #{hash.fetch("C1")}   |   #{hash.fetch("C2")}   |   #{hash.fetch("C3")}   *".colorize(:blue)
+    puts "C".colorize(:white) + " *   #{hash.fetch("C1")}   |   #{hash.fetch("C2")}   |   #{hash.fetch("C3")}   *".colorize(:blue)
     puts "  *       |       |       *".colorize(:blue)
     puts "  *************************".colorize(:blue)
   end
