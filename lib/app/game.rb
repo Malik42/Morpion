@@ -38,7 +38,7 @@ class Game
 		if is_win == false
 			@player_one.increments_number_of_egality
 			@player_two.increments_number_of_egality
-			puts "MATCH NULLLLLLL".colorize(:pink)
+			puts "MATCH NULLLLLLL".colorize(:red)
 		end
 	end
 
