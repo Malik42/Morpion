@@ -65,4 +65,8 @@ class Player
 	def return_number_of_win
 		@number_of_win
 	end
+
+	def return_number_of_egality
+		@number_of_egality
+	end
 end
