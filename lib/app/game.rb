@@ -21,11 +21,11 @@ class Game
 				if @who_play == 1
 					puts "le joueur #{@player_one.return_name} a gagner cette partie!"
 					@player_one.increments_number_of_win
-					puts @player_one.return_number_of_win
+					#puts @player_one.return_number_of_win
 				else
 					puts "le joueur #{@player_two.return_name} a gagner cette partie!"
 					@player_two.increments_number_of_win
-					puts @player_two.return_number_of_win
+					#puts @player_two.return_number_of_win
 				end
 				break
 			end
@@ -65,10 +65,16 @@ class Game
 
 	def modif_board_case(str)
 		if @who_play == 1
-			puts @player_one.return_name
+			puts " "
+			puts " "
+			puts "Joueur : #{@player_one.return_name}"
+			puts "Nombre de win : #{@player_two.return_number_of_win}"
 			@board_case[str] = 'X'
 		else
-			puts @player_two.return_name
+			puts " "
+			puts " "
+			puts "Joueur : #{@player_two.return_name}"
+			puts "Nombre de win #{@player_two.return_number_of_win}"
 			@board_case[str] = 'O'
 		end
 	end
