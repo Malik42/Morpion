@@ -1,4 +1,6 @@
 require 'colorize'
+require "./lib/app/player.rb"
+require "./lib/app/game.rb"
 # Classe Board : La class Board sert à afficher
 #
 # Variable : Possède aucune variable
@@ -26,5 +28,10 @@ class Board
     puts "C".colorize(:white) + " *   #{hash.fetch("C1")}   |   #{hash.fetch("C2")}   |   #{hash.fetch("C3")}   *".colorize(:blue)
     puts "  *       |       |       *".colorize(:blue)
     puts "  *************************".colorize(:blue)
+  end
+
+  def stats
+    puts "Joueur : #{@player_one.return_name}, Nombre de win : #{@player_one.return_number_of_win}"
+		puts "Joueur : #{@player_two.return_name}, Nombre de win : #{@player_two.return_number_of_win}"
   end
 end
