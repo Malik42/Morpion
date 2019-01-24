@@ -30,7 +30,7 @@ class Board
     puts "  *************************".colorize(:blue)
   end
 
-  def display_stat(@player_one.return_name, @player_two.return_name, @player_one.return_number_of_win, @player_two.return_number_of_win, @player_two.return_number_of_egality)
+  def display_stat(player_one_name, player_two_name, number_of_win_one, number_of_win_two, number_of_egality)
     puts "Joueur : #{@player_one.return_name}, Nombre de win : #{@player_one.return_number_of_win}"
 		puts "Joueur : #{@player_two.return_name}, Nombre de win : #{@player_two.return_number_of_win}"
   end
