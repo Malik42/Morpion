@@ -1,7 +1,7 @@
 class Player
 	@name= ""
 	@number_of_win = 0
-	@number_of>_egality = 0
+	@number_of_egality = 0
 
 	def initialize(game)
 		@name = name
