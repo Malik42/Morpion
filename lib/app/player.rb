@@ -1,5 +1,5 @@
 class Player
-	attr_accessor :name, :gamer
+	attr_accessor :name
 	@name= ""
 	@number_of_win = 0
 	@number_of_egality = 0
