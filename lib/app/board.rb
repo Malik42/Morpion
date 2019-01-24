@@ -31,7 +31,17 @@ class Board
   end
 
   def display_stat(player_one_name, player_two_name, number_of_win_one, number_of_win_two, number_of_egality)
-    puts "Joueur : #{@player_one.return_name}, Nombre de win : #{@player_one.return_number_of_win}"
-		puts "Joueur : #{@player_two.return_name}, Nombre de win : #{@player_two.return_number_of_win}"
+    number_of_part = number_of_win_one + number_of_win_two + number_of_egality  
+    puts " "
+    puts " "
+    puts "Joueur : #{player_one_name}, Nombre de win : #{number_of_win_one}"
+    puts "Joueur : #{player_two_name}, Nombre de win : #{number_of_win_two}"
+    if number_of_part == 0
+      puts "Ceci est votre première partie"
+    else
+      puts "Vous avez jouer #{number_of_win_one + number_of_win_two + number_of_egality} fois"
+    end
+    puts " "
+    puts " "
   end
 end
