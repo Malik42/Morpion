@@ -5,9 +5,9 @@ class Game
 	def initialize
 		@who_play = rand(1..2)
 		@board_case = {"A1" => " ", "A2" => " ", "A3" => " ", "B1" => " ", "B2" => " ", "B3" => " ", "C1" => " ", "C2" => " ", "C3" => " "}
-		print "name of gamer 1: "
+		print "name of gamer 1: ".colorize(:blue)
 		@player_one = Player.new
-		print "name of gamer 2: "
+		print "name of gamer 2: ".colorize(:blue)
 		@player_two = Player.new
 	end
 
@@ -16,7 +16,7 @@ class Game
 		for i in 1..9
 			# puts "Joueur : #{@player_one.return_name}, Nombre de win : #{@player_one.return_number_of_win}"
 			# puts "Joueur : #{@player_two.return_name}, Nombre de win : #{@player_two.return_number_of_win}"
-			board.display_stat(@player_one.return_name, @player_two.return_name, @player_one.return_number_of_win, @player_two.return_number_of_win, @player_two.return_number_of_egality)
+			# board.display_stat(@player_one.return_name, @player_two.return_name, @player_one.return_number_of_win, @player_two.return_number_of_win, @player_two.return_number_of_egality)
 			board.display_board(@board_case) if i == 1
 			select_board_case
 			board.display_board(@board_case)
