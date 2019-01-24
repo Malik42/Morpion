@@ -8,7 +8,7 @@ class Application
 	end
 
 	def start_game
-
+		game.play
 	end
 
 	def incrementes_number_of_part
@@ -16,10 +16,16 @@ class Application
 	end
 
 	def ask_replay
-
+		puts "Voulez vous rejouer ? OUI ou NON"
+		replay = gets.chomp
+		if replay.upcase == "OUI"
+			start_game
+		else
+			exit_game
+		end
 	end
 
 	def exit_game
-
+		
 	end
 end
