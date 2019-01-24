@@ -26,7 +26,7 @@ class Player
 	def initialize
 		@name = gets.chomp
 		@number_of_win = 0
-		@number_of_egality = 0
+		@number_of_egality = 0 # Nombre de partie egalité
 	end
 
 	# methode: init_name
@@ -65,6 +65,10 @@ class Player
 	def return_number_of_win
 		@number_of_win
 	end
+
+	# Method : return_number_of_egality
+  # Paramètre : Ne prend aucun paramètre
+  # Description : La method retourne le nombre d'egalite du joueur
 
 	def return_number_of_egality
 		@number_of_egality
