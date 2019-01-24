@@ -30,6 +30,11 @@ class Player
 		@number_of_egality = 0
 	end
 
+	# methode: init_name
+	# parametre: aucun
+	# description: la methode prend le nom entree par l'utilisateur et le verifie
+
+
 	# Method : return_name
   # Paramètre : Ne prend aucun paramètre
   # Description : La method retourne le nom du joueur
