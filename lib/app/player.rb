@@ -6,8 +6,8 @@ class Player
 	@number_of_win = 0
 	@number_of_egality = 0
 
-	def initialize(name)
-		print "name of gamer : "
+	def initialize
+		# print "name of gamer : "
 		@name = gets.chomp
 	end
 
