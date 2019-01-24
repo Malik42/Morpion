@@ -24,9 +24,9 @@ class Player
   # Description : La method initialise l'objet et demande a l'utilisateur de rentrez son nom
 
 	def initialize
-		@name = gets.chomp
 		@number_of_win = 0
 		@number_of_egality = 0 # Nombre de partie egalité
+		init_name
 	end
 
 	# methode: init_name
@@ -34,7 +34,15 @@ class Player
 	# description: la methode prend le nom entree par l'utilisateur et le verifie
 
 	def init_name
-		
+		flag = 0
+
+		while flag == 0
+			puts "entrez un nom qui as entre 1 et 20 characteres"
+			@name = gets.chomp
+			if (@name.length > 1 && @name.length < 20) && (@name.include?(" ") == false && @name.include?("\n") == false && @name.include?("\t") == false && @name.include?("\r") == false)
+				flag = 1
+			end
+		end
 	end
 
 	# Method : return_name
