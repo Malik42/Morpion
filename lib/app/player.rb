@@ -17,8 +17,8 @@ class Player
 
 	attr_accessor :name # Nom du joueur avec le droit d'ecriture et de lecture
 	attr_accessor :number_of_win
+	attr_accessor :number_of_egality
 	#@number_of_win = 0 # Nombre de partie gagnez
-	@number_of_egality = 0 # Nombre de partie egalité
 
 	# Method : initialize
   # Paramètre : Ne prend aucun paramètre
@@ -27,6 +27,7 @@ class Player
 	def initialize
 		@name = gets.chomp
 		@number_of_win = 0
+		@number_of_egality = 0
 	end
 
 	# Method : return_name
@@ -50,10 +51,7 @@ class Player
   # Description : La method sert a incrémenté la variable number_of_egality à chaque match null
 
 	def increments_number_of_egality
-		if @name == egality
 			@number_of_egality += 1
-			puts "Egalité"
-		end
 	end
 
 	# Method : return_number_of_win

@@ -35,6 +35,11 @@ class Game
 				@who_play = 1
 			end
 		end
+		if is_win == false
+			@player_one.increments_number_of_egality
+			@player_two.increments_number_of_egality
+			puts "MATCH NULLLLLLL".colorize(:pink)
+		end
 	end
 
 	def select_board_case
