@@ -34,6 +34,9 @@ class Player
 	# parametre: aucun
 	# description: la methode prend le nom entree par l'utilisateur et le verifie
 
+	def init_name
+		
+	end
 
 	# Method : return_name
   # Paramètre : Ne prend aucun paramètre
