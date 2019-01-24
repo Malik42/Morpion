@@ -1,12 +1,10 @@
 class Player
 	attr_accessor :name
-	@name= ""
 	@number_of_win = 0
 	@number_of_egality = 0
 
 	def initialize
-		# print "name of gamer : "
-		@name = gets.chomp
+		@name = gets.chomp-
 	end
 
 	def return_name
