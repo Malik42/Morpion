@@ -1,4 +1,4 @@
-#! Welcome to ours TIC TAC TOE GAME !!!
+# Welcome to ours TIC TAC TOE GAME !!!
 
 > **WARNING** The game can become an addiction 
 
