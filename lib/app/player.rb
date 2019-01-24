@@ -4,10 +4,9 @@ class Player
 	@number_of_win = 0
 	@number_of_egality = 0
 
-	def initialize(name)
+	def initialize(*name)
 		print "name of gamer : "
-		@gamer = gets.chomp
-		@name = name
+		@name = gets.chomp
 	end
 
 	def return_name
