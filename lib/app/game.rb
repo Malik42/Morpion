@@ -39,6 +39,7 @@ class Game
 		while valide_choice == 0
 			puts "Choisisez la case sur laquel vous voulez jouer.\n Si par exemple vous voulez jouer sur la premiere case ecrivez \"A1\""
 			case_choosed = gets.chomp.upcase
+			puts "Joueur :"
 			if (case_choosed[0] =~ /[A-C]/) != 0
 				case_choosed.reverse!
 			end
