@@ -31,7 +31,7 @@ class Board
   end
 
   def display_stat(player_one_name, player_two_name, number_of_win_one, number_of_win_two, number_of_egality)
-    number_of_part = number_of_win_one + number_of_win_two + number_of_egality  
+    number_of_part = number_of_win_one + number_of_win_two + number_of_egality
     puts " "
     puts " "
     puts "Joueur : #{player_one_name}, Nombre de win : #{number_of_win_one}"

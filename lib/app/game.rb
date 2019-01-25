@@ -33,11 +33,7 @@ class Game
 				end
 				break
 			end
-			if @who_play == 1
-				@who_play = 2
-			else
-				@who_play = 1
-			end
+			@who_play == 1 ? @who_play = 2 : @who_play = 1
 		end
 		if is_win == false
 			@player_one.increments_number_of_egality
