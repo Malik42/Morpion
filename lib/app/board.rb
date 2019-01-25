@@ -5,7 +5,7 @@ require "./lib/app/game.rb"
 #
 # Variable : Possède aucune variable
 #
-# Method : Possède une Method "display_board" qui prend en paramètre un hash
+# Method : Possède une Method "display_board" qui prend en paramètre un hash et une method display stat qui affiche le nom des joueur et leur nombre de win 
 
 class Board
 

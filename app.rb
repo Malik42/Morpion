@@ -1,11 +1,9 @@
-# Recupère toute les gem
-
-require 'bundler'
-Bundler.require
-
 # Recupère toute les classe
 
-$:.unshift File.expand_path("./lib/app", __FILE__)
+require './lib/app/application.rb'
+require './lib/app/game.rb'
+require './lib/app/board.rb'
+require './lib/app/player.rb'
 
 # Method qui commence le jeu
 
