@@ -4,9 +4,11 @@
 
 # RESUME
 
-The first step you run the |> ruby app.rb| in your terminal to the folder root.
+- The first step you run the |> bundle install| in your terminal
 
-The second step you... play :) No more, no less
+- Second step you run the |> ruby app.rb| in your terminal to the folder root.
+
+- The last you... play :) No more, no less
 
 
 
