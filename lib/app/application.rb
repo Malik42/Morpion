@@ -56,6 +56,7 @@ class Application
 			@game.init_board_case
 			start_game
 		else
+			@game.display_winner # on appel la methode qui affiche qui a gagner ou si il y a match nul
 			exit_game
 		end
 	end
@@ -66,5 +67,6 @@ class Application
 
 	def exit_game
 		puts "Au revoir"
+		exit! # on force la fermeture du programe
 	end
 end

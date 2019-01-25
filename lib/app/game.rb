@@ -101,4 +101,16 @@ class Game
 	def init_board_case
 		@board_case = {"A1" => " ", "A2" => " ", "A3" => " ", "B1" => " ", "B2" => " ", "B3" => " ", "C1" => " ", "C2" => " ", "C3" => " "}
 	end
+
+	# cette methode affiche qui a gagner la partie, si il y a match nul ou pas...
+
+	def display_winner
+		if @player_one.return_number_of_win > @player_two.return_number_of_win # on fait une condition qui compare le nombre de victoire des joueurs pour savoir lequel a gagner la partie
+			puts "\n\n\nBravo #{@player_one.return_name.colorize(:green)} Vous avez battu #{@player_two.return_name.colorize(:red)}"
+		elsif @player_one.return_number_of_win < @player_two.return_number_of_win
+			puts "\n\n\nBravo #{@player_two.return_name.colorize(:green)} Vous avez battu #{@player_one.return_name.colorize(:red)}"
+		else
+			puts "\n\n\nBravo #{@player_two.return_name.colorize(:blue)} et #{@player_one.return_name.colorize(:blue)} Vous avez fait un match nul!"
+		end
+	end
 end
