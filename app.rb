@@ -1,10 +1,7 @@
-#require 'bundler'
-#Bundler.require
-require './lib/app/application.rb'
-require './lib/app/game.rb'
-require './lib/app/player.rb'
-require './lib/app/board.rb'
-#$:.unshift File.expand_path("./lib/app/application.rb", __FILE__)
+require 'bundler'
+Bundler.require
+
+$:.unshift File.expand_path("./lib/app", __FILE__)
 
 def game_again
 	while true
