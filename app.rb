@@ -1,13 +1,16 @@
-#require 'bundler'
-#Bundler.require
+# Recupère toute les classe
+
 require './lib/app/application.rb'
 require './lib/app/game.rb'
-require './lib/app/player.rb'
 require './lib/app/board.rb'
-#$:.unshift File.expand_path("./lib/app/application.rb", __FILE__)
+require './lib/app/player.rb'
+
+# Method qui commence le jeu
 
 def game_again
 	while true
+
+		# On demande a l'utilisateur ce qu'il veut faire
 
 		puts "Bienvenue dans le menu"
 		puts "1. Démarrer une partie"
@@ -16,15 +19,20 @@ def game_again
 
 		case continued
 		when 1
+			# On demarre la partie
 			puts "La partie démarre"
 			game = Application.new
 		when 2
+			# si l'utilisateur ne veut pas jouer on quitte l'interface
 			puts "Merci et à bientôt"
 			break
 		else
+			# Si il entre autre chose que 1 ou 2 on renvoi une erreur
 			puts "Error"
 		end
 	end
 end
+
+# On lance le programme
 
 game_again

@@ -68,5 +68,3 @@ class Application
 		puts "Au revoir"
 	end
 end
-
-#test = Application.new
