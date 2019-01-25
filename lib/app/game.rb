@@ -44,37 +44,45 @@ class Game
 		end
 	end
 
+	# On cree une methode qui demande a l'utilisateur de choisire une case
+
 	def select_board_case
-		valide_choice = 0
+		valide_choice = 0 # on cree une variable qui vas nous servir de flag pour la boucle, on fera une boucle infini jusqu'a ce que cette variable soit egale a 1
 
 		while valide_choice == 0
 			puts "Choisisez la case sur laquel vous voulez jouer.\n Si par exemple vous voulez jouer sur la premiere case ecrivez \"A1\""
-			case_choosed = gets.chomp.upcase
-			if (case_choosed[0] =~ /[A-C]/) != 0
-				case_choosed.reverse!
+			case_choosed = gets.chomp.upcase # on recupere ca case que l'utilisateur a choisi de jouer et on la met en majuscule (sa permet au joueur de pouvoir selectionner une lettre minuscule)
+			if (case_choosed[0] =~ /[A-C]/) != 0 # si le premier caractere n'es pas une lettre entre A et C (regex) on rentre dans la condition
+				case_choosed.reverse! # et on inverse la chaine de caractere (comme sa si l'utilisateur a mis 1A alor le programme ici transforme en A1)
 			end
 
+			# on fait une condition qui test si la case selectionner par l'utilisateur est vide ou pas, si elle a deja ete prise ou que l'utilisateur rentre n'importe quoi alor il vas boucler temp qu'il ne choisi pas une case vide
 			if ((case_choosed[0] == 'A' || case_choosed[0] == 'B' || case_choosed[0] == 'C') && (case_choosed[1] == '1' || case_choosed[1] == '2' || case_choosed[1] == '3')) && case_choosed.length == 2 && @board_case.fetch(case_choosed) == " "
-				valide_choice = 1
+				valide_choice = 1 # si l'utilisateur remplis toutes les conditions ca veut dire qu'il a selectionner une case valide on lui permet de sortir de la boucle
 			end
 
-			if !(@board_case.has_value?(" "))
+			if !(@board_case.has_value?(" ")) # si aucune case de notre hash board_case n'es vide alor toute les cases on ete remplie, on permet a l'utilisateur de sortir de la boucle
 				valide_choice = 1
 			end
 		end
-		modif_board_case(case_choosed)
+		modif_board_case(case_choosed) # on appel la class qui modifie le hash Board_case
 	end
 
-	def modif_board_case(str)
-		if @who_play == 1
+	# on remplis notre hash avec des X et des O en fonction du tour de jeux
+
+	def modif_board_case(str) # la methode prend la key du hash a modifier en parametre ("A1" par exemple)
+		if @who_play == 1 # si c'est le joueur 1 qui a jouer pendant ce tour de jeux alor on remplis le hash avec une croix ("X")
 			@board_case[str] = 'X'
-		else
+		else # sinon on remplis la case du tableau avec un rond ("O")
 			@board_case[str] = 'O'
 		end
 	end
 
+	# Cette methode verifi tout les cas de victoire
+
 	def is_win
-		game_win = false
+		game_win = false # on cree une variable Game_win qui vaux false par default
+		# si une des 8 condition de victoire est bonne alor on la variable game_win devien egale a true
 		if (@board_case["A1"] == @board_case["A2"] && @board_case["A2"] == @board_case["A3"] && @board_case["A1"] != " ") ||
 			(@board_case["B1"] == @board_case["B2"] && @board_case["B2"] == @board_case["B3"] && @board_case["B1"] != " ") ||
 			(@board_case["C1"] == @board_case["C2"] && @board_case["C2"] == @board_case["C3"] && @board_case["C1"] != " ") ||
@@ -85,12 +93,12 @@ class Game
 			(@board_case["A3"] == @board_case["B2"] && @board_case["B2"] == @board_case["C1"] && @board_case["A3"] != " ")
 			game_win = true
 		end
-		game_win
+		game_win # on renvoi la valeur de la variable qui indique si il y a un cas de victoire sur le plateau ou pas
 	end
+
+	# on cree une class qui vas vider toutes les cases du tableau, c'est utile quand on relance une nouvelle partie
 
 	def init_board_case
 		@board_case = {"A1" => " ", "A2" => " ", "A3" => " ", "B1" => " ", "B2" => " ", "B3" => " ", "C1" => " ", "C2" => " ", "C3" => " "}
 	end
 end
-
-# test = Game.new

@@ -38,8 +38,9 @@ class Board
     number_of_part = number_of_win_one + number_of_win_two + number_of_egality
     puts " "
     puts " "
-    puts "Joueur : #{player_one_name}, Nombre de win : #{number_of_win_one}"
-    puts "Joueur : #{player_two_name}, Nombre de win : #{number_of_win_two}"
+    # dans les deux prochain puts on fait une ternaire qui vas colorier en rouge le score plus plus petit et en vert le score le plus haut
+    puts "Joueur : #{player_one_name.colorize(:blue)}, Nombre de win : #{number_of_win_one >= number_of_win_two ? number_of_win_one.to_s.colorize(:green) : number_of_win_one.to_s.colorize(:red)}"
+    puts "Joueur : #{player_two_name.colorize(:blue)}, Nombre de win : #{number_of_win_two >= number_of_win_one ? number_of_win_two.to_s.colorize(:green) : number_of_win_two.to_s.colorize(:red)}"
     if number_of_part == 0
       puts "Ceci est votre première partie"
     else
